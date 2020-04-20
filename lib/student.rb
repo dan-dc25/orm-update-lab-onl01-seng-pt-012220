@@ -3,7 +3,7 @@ require_relative "../config/environment.rb"
 class Student
 
   attr_accessor :id, :name, :grade
-  
+
   def initialize(id=nil, name, grade)
     @id = id
     @name = name
@@ -62,6 +62,7 @@ class Student
     sql = "UPDATE students SET name = ?, grade = ?, id = ?"
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
+  
 end
 
 
